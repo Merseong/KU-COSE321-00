@@ -10,3 +10,6 @@ class_experiments_v21.xpr
 # log files
 *.log
 /*/*.log
+
+.analytics
+.metadata/.plugins/org.eclipse.core.resources/.history

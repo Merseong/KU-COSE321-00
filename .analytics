@@ -4,3 +4,12 @@ timestamp=[2022-03-27 20:27:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00
 timestamp=[2022-03-27 20:28:26], mode=PLATFORM_CREATION, duration=0:00:21.699, duration_ms=21699, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
 timestamp=[2022-03-27 20:29:21], mode=PLATFORM_GENERATION, duration=0:00:31.068, duration_ms=31068, data={name=csd_platform}
 timestamp=[2022-03-27 20:31:04], mode=APP_CREATION, duration=0:00:08.792, duration_ms=8792, data={name=csd_lab, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=csd_platform, application_type=application}
+timestamp=[2022-03-28 10:08:58], mode=WORKBENCH_START, duration=0:00:09.997, duration_ms=9997, data={}
+timestamp=[2022-03-28 10:09:00], mode=WORKBENCH_UI_INIT, duration=0:00:01.406, duration_ms=1406, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,csd_lab,csd_lab_system,csd_platform}
+timestamp=[2022-03-28 10:09:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.369, duration_ms=369, data={}
+timestamp=[2022-03-28 10:16:51], mode=BUILD, duration=0:00:02.711, duration_ms=2711, data={name=csd_lab, configuration=Debug, clean_build=false}
+timestamp=[2022-03-28 10:17:06], mode=BUILD, duration=0:00:14.049, duration_ms=14049, data={name=csd_lab_system, configuration=Debug, clean_build=false}
+timestamp=[2022-03-28 10:18:49], mode=PLATFORM_GENERATION, duration=0:00:13.872, duration_ms=13872, data={name=csd_platform}
+timestamp=[2022-03-28 10:18:50], mode=BUILD, duration=0:00:00.312, duration_ms=312, data={name=csd_lab, configuration=Debug, clean_build=true}
+timestamp=[2022-03-28 10:19:45], mode=PLATFORM_GENERATION, duration=0:00:24.592, duration_ms=24592, data={name=csd_platform}
+timestamp=[2022-03-28 10:19:46], mode=BUILD, duration=0:00:01.894, duration_ms=1894, data={name=csd_lab, configuration=Debug, clean_build=false}

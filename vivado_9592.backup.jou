@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sun Mar 27 20:23:47 2022
+# Process ID: 9592
+# Current directory: C:/Documents/KU-COSE321-00
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7068 C:\Documents\KU-COSE321-00\class_experiments_v21.xpr
+# Log file: C:/Documents/KU-COSE321-00/vivado.log
+# Journal file: C:/Documents/KU-COSE321-00\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Documents/KU-COSE321-00/class_experiments_v21.xpr
+update_compile_order -fileset sources_1
+write_hw_platform -fixed -include_bit -force -file C:/Documents/KU-COSE321-00/SoC_wrapper.xsa
