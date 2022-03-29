@@ -28,8 +28,8 @@ sort_loop:
 
 find_min_loop:
 	ldr r8, [r7], #4		// load the word in [r7] to r8, update r7 = r7 + 4
-	cmp r8, r5				// r8 - r5 => refresh NZCV
-	blt	find_min_loop_min_found		// N set means r5 > r8
+	cmp r5, r8				// r5 - r8 => refresh NZCV
+	bge	find_min_loop_min_found		// N set means r5 >= r8
 
 	b find_min_loop_after	// if (r5 <= r8) not doing min_found action
 
