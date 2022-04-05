@@ -44,3 +44,19 @@ timestamp=[2022-04-05 21:48:46], mode=BUILD, duration=0:00:00.279, duration_ms=2
 timestamp=[2022-04-05 21:48:48], mode=BUILD, duration=0:00:02.625, duration_ms=2625, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
 timestamp=[2022-04-05 21:56:16], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=csd_lab_assignment3, configuration=Debug, clean_build=true}
 timestamp=[2022-04-05 21:56:18], mode=BUILD, duration=0:00:02.016, duration_ms=2016, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 21:57:46], mode=WORKBENCH_START, duration=0:00:10.615, duration_ms=10615, data={}
+timestamp=[2022-04-05 21:57:47], mode=WORKBENCH_UI_INIT, duration=0:00:01.019, duration_ms=1019, data={editors_count=2, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,csd_lab,csd_lab_assignment3,csd_lab_assignment3_system,csd_lab_system,csd_platform}
+timestamp=[2022-04-05 21:57:48], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.490, duration_ms=490, data={}
+timestamp=[2022-04-05 22:06:37], mode=BUILD, duration=0:00:01.619, duration_ms=1619, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 22:49:50], mode=BUILD, duration=0:00:01.558, duration_ms=1558, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 22:52:41], mode=BUILD, duration=0:00:01.426, duration_ms=1426, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 22:53:11], mode=BUILD, duration=0:00:01.429, duration_ms=1429, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 22:55:32], mode=BUILD, duration=0:00:01.344, duration_ms=1344, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 22:57:33], mode=BUILD, duration=0:00:00.526, duration_ms=526, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 23:00:41], mode=BUILD, duration=0:00:01.192, duration_ms=1192, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 23:03:29], mode=BUILD, duration=0:00:01.261, duration_ms=1261, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 23:06:47], mode=BUILD, duration=0:00:01.511, duration_ms=1511, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-05 23:09:37], mode=BUILD, duration=0:00:01.582, duration_ms=1582, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-06 00:11:12], mode=BUILD, duration=0:00:01.016, duration_ms=1016, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-06 00:12:35], mode=BUILD, duration=0:00:01.699, duration_ms=1699, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-06 00:16:46], mode=BUILD, duration=0:00:01.517, duration_ms=1517, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
