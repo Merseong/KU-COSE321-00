@@ -1,7 +1,7 @@
 int csd_main()
 {
-	unsigned* sw_addr = (unsigned*)0x41210000;
-	unsigned* timer_out_addr = (unsigned*)0x00101000;
+	unsigned* sw_addr = (unsigned*)0x41210000;			// address of switch GPIO
+	unsigned* timer_out_addr = (unsigned*)0x00101000;	// address of shared memory with assembly
 
 	if (*sw_addr & 0b10000000)
 	{
@@ -37,7 +37,7 @@ int csd_main()
 	}
 	else
 	{
-		*timer_out_addr = (unsigned)0x13DE4208; // 1 sec , 33.3333MHz
+		*timer_out_addr = (unsigned)0x13DE4208; // 1 sec
 	}
 
 	return 0;

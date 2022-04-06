@@ -60,3 +60,6 @@ timestamp=[2022-04-05 23:09:37], mode=BUILD, duration=0:00:01.582, duration_ms=1
 timestamp=[2022-04-06 00:11:12], mode=BUILD, duration=0:00:01.016, duration_ms=1016, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
 timestamp=[2022-04-06 00:12:35], mode=BUILD, duration=0:00:01.699, duration_ms=1699, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
 timestamp=[2022-04-06 00:16:46], mode=BUILD, duration=0:00:01.517, duration_ms=1517, data={name=csd_lab_assignment3, configuration=Debug, clean_build=false}
+timestamp=[2022-04-06 21:01:36], mode=WORKBENCH_START, duration=0:00:20.530, duration_ms=20530, data={}
+timestamp=[2022-04-06 21:01:37], mode=WORKBENCH_UI_INIT, duration=0:00:01.755, duration_ms=1755, data={editors_count=3, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,csd_lab,csd_lab_assignment3,csd_lab_assignment3_system,csd_lab_system,csd_platform}
+timestamp=[2022-04-06 21:01:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.296, duration_ms=1296, data={}
