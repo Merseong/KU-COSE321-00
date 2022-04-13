@@ -16,7 +16,7 @@ main:
 	mov r10, #1		// r10: current status of led
 	ldr r11, =csd_LED_ADDR	// r11: address of led GPIO
 	str r10, [r11]		// set inital led
-	ldr r12, =0x13DE4208		// r12: timer, show left time to go next led
+	ldr r12, =0x00800000		// r12: timer, show left time to go next led
 	ldr r0, =csd_main_output	// store time value to output of C code
 	str r12, [r0]
 
@@ -76,15 +76,14 @@ TX_loop:
 // use r0~r6
 recvloop:
 	ldr r0, =uart_TX_RX_FIFO0
-	ldr r1, =csd_main_input
-	ldr r2, =csd_main_output
+	ldr r1, =uart_Channel_sts_reg0
 
 	// check empty: bit#1 is Rx FIFO empty or not (1: empty, 0: not empty)
-	ldr r3, [r0]
+	ldr r3, [r1]
 	and r3, r3, #1<<1
 	cmp r3, #0b10
 
-	moveq pc, lr 	// return to the caller when empty
+	beq forever 	// return to the caller when empty
 
 	// read data and transmit it back to sender
 	ldr r4, [r0]
@@ -126,12 +125,10 @@ string:
 	.byte 0x0D
 	.byte 0x0A
 	.ascii "---------------------------------------------------"
-	.byte 0x0D
-	.byte 0x0A
 	.byte 0x00
 
 select_string:
-	.ascii "Select: "
 	.byte 0x0D
 	.byte 0x0A
+	.ascii "Select: "
 	.byte 0x00

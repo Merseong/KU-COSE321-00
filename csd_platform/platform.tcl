@@ -21,3 +21,5 @@ platform generate
 platform generate -domains zynq_fsbl 
 platform generate
 platform generate
+platform clean
+platform generate
