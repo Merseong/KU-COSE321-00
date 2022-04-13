@@ -106,6 +106,10 @@ return_action:
 
 	ldr r2, =select_string
 	bl UART_print_r2	// Print out "Select: "
+	
+	ldr r6, =csd_main_input
+	ldr r5, #0
+	str r5, [r6]		// reset csd_main_input
 
 	b forever
 //
