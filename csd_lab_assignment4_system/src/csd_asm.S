@@ -17,7 +17,7 @@ main:
 	ldr r11, =csd_LED_ADDR	// r11: address of led GPIO
 	str r10, [r11]		// set inital led
 	ldr r12, =0x13DE4208		// r12: timer, show left time to go next led
-	ldr r0, =csd_main_output
+	ldr r0, =csd_main_output	// store time value to output of C code
 	str r12, [r0]
 
 	ldr r2, =string		// r2: address of data to print (use before UART_print_r2)
@@ -72,7 +72,7 @@ TX_loop:
 // --------------------------------------------------------
 
 // --------------------------------------------------------
-// recvloop
+// recvloop : echo RX to TX, do return action(change time) when 'Enter' received
 // use r0~r6
 recvloop:
 	ldr r0, =uart_TX_RX_FIFO0
