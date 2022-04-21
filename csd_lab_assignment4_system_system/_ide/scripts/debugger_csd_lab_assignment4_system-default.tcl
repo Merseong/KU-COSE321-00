@@ -13,7 +13,7 @@ connect -url tcp:127.0.0.1:3121
 targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
-targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A3976C" && level==0 && jtag_device_ctx=="jsn-Zed-210248A3976C-23727093-0"}
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AC8E49" && level==0 && jtag_device_ctx=="jsn-Zed-210248AC8E49-23727093-0"}
 fpga -file C:/Documents/KU-COSE321-00/csd_lab_assignment4_system/_ide/bitstream/SoC_wrapper.bit
 targets -set -nocase -filter {name =~"APU*"}
 loadhw -hw C:/Documents/KU-COSE321-00/csd_platform/export/csd_platform/hw/SoC_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
@@ -25,5 +25,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/Documents/KU-COSE321-00/csd_lab_assignment4_system/Debug/csd_lab_assignment4_system.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
+bpadd -addr &main

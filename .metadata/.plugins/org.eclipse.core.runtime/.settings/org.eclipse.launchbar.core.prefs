@@ -1,9 +1,10 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment3-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment4_system-Default
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment3-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment4_system-Default,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_csd_lab_assignment5_system
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab-Default/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment3-Default/activeLaunchMode=debug
-org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment4_system-Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment4_system-Default/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_csd_lab_assignment5_system/activeLaunchMode=debug
