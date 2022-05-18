@@ -1,7 +1,7 @@
 #include "uart_init.s"
 #include "csd_zynq_peripherals.h"
 
-#define	TIMER_INITIAL	0x1000000
+#define	TIMER_INITIAL	0x1C9C380
 
 .align 5
 
