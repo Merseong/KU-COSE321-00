@@ -137,31 +137,16 @@ main:
 	ldr r1, =string
 	bl UART_print_r1
 
- 	// Check out the counter value to make sure the counter is decrementing
-	ldr r0, =PRIVATE_COUNTER
-	ldr r1, [r0]
-	ldr r2, [r0]
-	ldr r3, [r0]
-	ldr r4, [r0]
-	ldr r5, [r0]
-	ldr r6, [r0]
-	ldr r7, [r0]
-	ldr r8, [r0]
-
-	ldr r0, =PRIVATE_COUNTER
-	ldr r1, =PRIVATE_STATUS
-	ldr r2, =GICD_ISPENDR0
+	nop
 
 forever:
-	ldr r5, [r0]
-	ldr r6, [r1]
-	ldr r7, [r2]
+	nop
 	b forever
 
 
-//
+// ----------------------------
 // UART_print_r1: print r0 data to UART
-//
+// ----------------------------
 
 UART_print_r1:
 
