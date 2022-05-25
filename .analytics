@@ -367,3 +367,6 @@ timestamp=[2022-05-25 17:01:52], mode=BUILD, duration=0:00:01.021, duration_ms=1
 timestamp=[2022-05-25 17:01:59], mode=BUILD, duration=0:00:06.607, duration_ms=6607, data={name=csd_lab_assignment8_system, configuration=Debug, clean_build=false}
 timestamp=[2022-05-25 17:03:44], mode=BUILD, duration=0:00:01.018, duration_ms=1018, data={name=csd_lab_assignment8, configuration=Debug, clean_build=false}
 timestamp=[2022-05-25 17:03:51], mode=BUILD, duration=0:00:06.588, duration_ms=6588, data={name=csd_lab_assignment8_system, configuration=Debug, clean_build=false}
+timestamp=[2022-05-25 17:53:37], mode=WORKBENCH_START, duration=0:00:13.599, duration_ms=13599, data={}
+timestamp=[2022-05-25 17:53:39], mode=WORKBENCH_UI_INIT, duration=0:00:01.314, duration_ms=1314, data={editors_count=7, platform_editors_count=1, projects_count=16, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,csd_lab,csd_lab_assignment3,csd_lab_assignment3_system,csd_lab_assignment4_system,csd_lab_assignment4_system_system,csd_lab_assignment5,csd_lab_assignment5_system,csd_lab_assignment6,csd_lab_assignment6_system,csd_lab_assignment7,csd_lab_assignment7_system,csd_lab_assignment8,csd_lab_assignment8_system,csd_lab_system,csd_platform}
+timestamp=[2022-05-25 17:53:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.147, duration_ms=1147, data={}

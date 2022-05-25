@@ -7,12 +7,12 @@
 
 .global main
 main:
-	cps #0x13
+	cps #0x13	// use supervised mode
 
 	mov r10, #0	// r10: current cache status (off/on)
 	ldr r0, =csd_SW_ADDR
 	ldr r0, [r0]
-	ands r10, r0, #1 << 7
+	and r10, r0, #1 << 7	// check if 0b10000000 status (use bit masking)
 
 	cmp r10, #0
 	bleq disable_cache
