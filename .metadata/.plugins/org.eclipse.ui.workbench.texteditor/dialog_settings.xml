@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=".endm"/>
+		<item key="selection" value="enable_cache"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value=".endm"/>
+			<item value="enable_cache"/>
+			<item value="csd_main"/>
 			<item value="main"/>
+			<item value=".endm"/>
 			<item value=".ltorg"/>
 			<item value="Output"/>
 			<item value="ands"/>
@@ -21,8 +23,6 @@
 			<item value="r4"/>
 			<item value="r5"/>
 			<item value="stack_area"/>
-			<item value="stack_point"/>
-			<item value="csd_main"/>
 		</list>
 		<list key="replacehistory">
 			<item value="\table_reg"/>
