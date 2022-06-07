@@ -4,6 +4,7 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="G:\내 드라이브\문서\2022-1 3학년1학기\서컴시\assignment9"/>
 			<item value="G:\내 드라이브\문서\2022-1 3학년1학기\서컴시\assignment7\lab_uart_hello_using_macro"/>
 			<item value="G:\내 드라이브\문서\2022-1 3학년1학기\서컴시\assignment7\lab_interrupt_private_timer"/>
 			<item value="G:\내 드라이브\문서\2022-1 3학년1학기\서컴시\mini-project\tasks"/>
