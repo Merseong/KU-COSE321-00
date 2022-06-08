@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="result"/>
+		<item key="selection" value="csd_mmu_tbl"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="result"/>
-			<item value="pc_Stack"/>
-			<item value="0010a6d4"/>
-			<item value="10A6D4"/>
-			<item value="10A6F0"/>
-			<item value="pc_stack_top"/>
-			<item value="task"/>
-			<item value="enable_cache"/>
-			<item value="csd_main"/>
-			<item value="main"/>
-			<item value=".endm"/>
-			<item value=".ltorg"/>
-			<item value="Output"/>
-			<item value="ands"/>
-			<item value="mov r6"/>
+			<item value="csd_mmu_tbl"/>
+			<item value="__csd_mmu_tbl_start"/>
+			<item value="csd_mmu"/>
+			<item value="csd_mmu_tbl_lv2"/>
+			<item value="9f8"/>
+			<item value="offset"/>
+			<item value="7EF1B10F"/>
+			<item value="csd_MMUTable_lv2"/>
+			<item value="csd_MMUTable"/>
+			<item value="translation"/>
+			<item value="translatin"/>
+			<item value="translation."/>
+			<item value="0x2"/>
+			<item value="+ 0x2"/>
+			<item value="400002"/>
 		</list>
 		<list key="replacehistory">
 			<item value="\table_reg"/>
@@ -31,8 +31,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="715"/>
-		<item key="DIALOG_Y_ORIGIN" value="184"/>
+		<item key="DIALOG_X_ORIGIN" value="1017"/>
+		<item key="DIALOG_Y_ORIGIN" value="128"/>
 		<item key="DIALOG_WIDTH" value="340"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

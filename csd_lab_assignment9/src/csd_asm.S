@@ -11,7 +11,7 @@
 // Our interrupt vector table
 // --------------------------
 csd_vector_table:
-	b .
+	b csd_reset
 	b .
 	b .
 	b csd_prefetch_abort
@@ -21,31 +21,16 @@ csd_vector_table:
 	b .
 
 .global main
+csd_reset:
 main:
-
 	// -------------------------------------
-	// Set VBAR (Vector Base Address Register) to 
+	// Set VBAR (Vector Base Address Register) to
 	// the base location of our interrupt vector table
 	// -------------------------------------
 	ldr     r0, =csd_vector_table
 	mcr     p15, 0, r0, c12, c0, 0
 	dsb
 	isb
-
-	// read SCTLR (System Control Register) to r0
-	mrc	p15, 0, r0, c1, c0, 0
-
-	// read SCR (Secure Configuration Register) to r1
-	mrc p15, 0, r1, c1, c1, 0
-
-	// read TTBCR (Translation Table Base Control Register) to r2
-	mrc p15, 0, r2, c2, c0, 2
-
-	// read TTBR0 to r3
-	mrc p15, 0, r3, c2, c0, 0
-
-	// read DACR (Domain Access Control Register) to r4
-	mrc p15, 0, r4, c3, c0, 0
 
 	/* Disable MMU, if enabled */
 	mrc	p15, 0, r0, c1, c0, 0		/* read CP15 register 1 */
@@ -58,67 +43,38 @@ main:
 	mcr	p15, 0, r0, c7, c5, 0		/* invalidate icache */
 	mcr	p15, 0, r0, c7, c5, 6		/* Invalidate branch predictor array */
 
-// case A: turn on both (1) and (2): prefetch abort at "dsb"
-// case B: turn on only (2): data abort at "ldr r6, [r0]  // read from 0x10_0000"
-
-// ---------------------- (1) start --------------------------
-// Its behavior:
-// If $ and TLBs are invalidated and SW-exception handling is turned on,
-// debugger hangs when executing dsb (right after MMU enable).
-//
-// My thought:
-// If you let it go with entering F5 and suspend CPU
-// then, it keeps executing the prefetch abort vector (because it can't find the translation info.?)
-// so I guess it is an expected result...
-// You should have at least a page with interrupt vector table already mapped.
-
-/*
-	// Invalidate caches and TLBs (from Boot.S)
-	mov	r0,#0				// r0 = 0
-	mcr	p15, 0, r0, c8, c7, 0		// invalidate TLBs
-	mcr	p15, 0, r0, c7, c5, 0		// invalidate icache
-	mcr	p15, 0, r0, c7, c5, 6		// Invalidate branch predictor array
-*/
-// ---------------------- (1) end --------------------------
-
     /* Begin: store some words to the start of each 1MB section */
-	mov r0, #0x100000
-	mov r1, #0x200000
-	mov r2, #0x400000
+	mov r0, #0x400000
+	mov r1, #1024
+	rsb r1, r1, #0
+	mov r2, #0
 
-	mov r3, #0x11
-	mov r4, #0x22
-	mov r5, #0x44
+set_loop_a:
+	cmp r1, r2
+	strne r1, [r0], #4
+	add r1, r1, #1
+	bne set_loop_a
 
-	str r3, [r0]
-	str r4, [r1]
-	str r5, [r2]
+	mov r1, #1
+	mov r2, #2049
 
-	ldr r10, [r0]
-	ldr r11, [r1]
-	ldr r12, [r2]
+set_loop_b:
+	cmp r1, r2
+	strne r1, [r0], #4
+	add r1, r1, #1
+	bne set_loop_b
+
     /* End */
 
+	mrc	p15, 0, r0, c2, c0, 0		/* TTBR0 */
 	ldr	r0,=csd_MMUTable	   /* Load MMU translation table base */
 	orr	r0, r0, #0x5B			/* Outer-cacheable, WB */
-	mcr	15, 0, r0, c2, c0, 0		/* TTBR0 */
+	mcr	p15, 0, r0, c2, c0, 0		/* TTBR0 */
 
 	// Clear PD0 in TTBCR (Translation Table Base Control Register)
 	mrc p15, 0, r2, c2, c0, 2
 	bic r2, r2, #(1<<4)   // Set PD0 to 0 = HW-based page table walk
 	mcr p15, 0, r2, c2, c0, 2
-
-// ---------------------- (2) start --------------------------
-/*
-    // Play with HW page walk or SW handling of TLB miss
-	// Page Table Walk by HW or SW (translation fault)
-	// TTBCR (Translation Table Base Control Register) PD1, PD0
-	mrc p15, 0, r2, c2, c0, 2
-	orr r2, r2, #(1<<5)   // Set PD1 to 1 = TLB miss generates a translation fault
-	orr r2, r2, #(1<<4)   // Set PD0 to 1 = TLB miss generates a translation fault
-	mcr p15, 0, r2, c2, c0, 2
-*/
-// ---------------------- (2) end --------------------------
 
 	/* Enable MMU */
 	// Set M-bit in SCTLR (System Control Register)
@@ -133,14 +89,16 @@ main:
 	// read SCTLR (System Control Register) to r0
 	mrc	p15, 0, r0, c1, c0, 0
 
-	mov r0, #0x100000
-	mov r1, #0x200000
-	mov r2, #0x300000
-	mov r3, #0x400000
-	ldr r6, [r0]   /* read from 0x10_0000 to see if it reads from 0x20_0000 */
-	ldr r7, [r1]   /* read from 0x20_0000 to see if it reads from 0x40_0000 */
-	ldr r8, [r2]   /* read from 0x30_0000 to see if it reads from 0x20_0000 */
-	ldr r9, [r3]   /* read from 0x40_0000 to see if it reads from 0x10_0000 */
+	mov r0, #0x200000
+	mov r1, #0
+	mov r2, #3072
+
+add_loop:
+	cmp r2, #0
+	subne r2, r2, #1
+	ldrne r3, [r0], #4
+	addne r1, r1, r3
+	bne add_loop
 
 forever:
 	nop
