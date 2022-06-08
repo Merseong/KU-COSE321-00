@@ -9,8 +9,9 @@ org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment3-
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment4_system-Default/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment6-Default/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment8-Default/activeLaunchMode=embrun
-org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment9-Default/activeLaunchMode=embdebug
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_csd_lab_assignment9-Default/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_csd_lab_assignment5_system/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_csd_lab_assignment7_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_csd_lab_assignment8_system/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_csd_lab_assignment9_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_csd_lab_mini_project_system/activeLaunchMode=run

@@ -8,12 +8,14 @@ csd_MMUTable_lv2:
 	 *     2nd 4KB: 0x0020_1000 (VA) -> 0x0040_1000 (PA)
 	 *     3rd 4KB: 0x0020_2000 (VA) -> 0x0040_2000 (PA)
 	 */
+/*
 .set PAGE, 0x400000
 .word	PAGE + 0x2
 .set PAGE, PAGE + 0x1000
 .word	PAGE + 0x2
 .set PAGE, PAGE + 0x1000
 .word	PAGE + 0x2
+*/
 
 // Figure 3
 	/*
@@ -21,14 +23,14 @@ csd_MMUTable_lv2:
 	 *     2nd 4KB: 0x0020_1000 (VA) -> 0x0040_2000 (PA)
 	 *     3rd 4KB: 0x0020_2000 (VA) -> 0x0040_0000 (PA)
 	 */
-/*
+///*
 .set PAGE, 0x400000
 .word	PAGE + 0x2
 .set PAGE, PAGE + 0x2000
 .word	PAGE + 0x2
 .set PAGE, PAGE - 0x2000
 .word	PAGE + 0x2
-*/
+//*/
 // end table lv2
 
 .globl  csd_MMUTable

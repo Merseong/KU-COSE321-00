@@ -1,10 +1,3 @@
-// ------------------------------------------
-//  Author: Prof. Taeweon Suh
-//          Computer Science & Engineering
-//          College of Informatics, Korea Univ.
-//  Date:   May 29, 2022
-// ------------------------------------------
-
 // Vector table base location should be aligned at 2^5
 .align 5
 // --------------------------
