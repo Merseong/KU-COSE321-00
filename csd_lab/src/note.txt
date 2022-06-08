@@ -1,8 +1,0 @@
-* xparameters.h
-
-csd_platform/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/include 안에 있음
-221번줄부터 LED나 스위치 등의 메모리 주소 있음
-
-* elf file
-
-컴파일된건 /Debug/csd_lab.elf에 있음

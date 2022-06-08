@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/csd_lab_assignment8/src/helloworld.c" element2="/csd_lab_assignment8/src/platform_config.h" element3="/csd_lab_assignment8/src/platform.c" element4="/csd_lab_assignment8/src/platform.h" element5="/csd_lab_assignment8/src/lscript.ld" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1653461829716"/>
-</session>
